@@ -17,7 +17,7 @@
 html{
   width: 100%;
   height: 100%;
-  overflow-y: hidden;
+  
  
 }
 
@@ -52,9 +52,10 @@ body {
   z-index: 2;
 }
 .container h1 {
-  color: #ffffff;
+  color: #d9d9d9f1;
   font-weight: 400;
   font-size: 40px;
+  font-family: comic sans ms;
 }
 
 .deck {
@@ -63,7 +64,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  padding: 15px;
+  padding: 10px;
   margin: 0 auto;
   background: var(--deck-background);
   border-radius: 10px;
@@ -71,13 +72,13 @@ body {
 }
 
 .modal-img {
-    padding: 5px;
-	width: 100px;
-    display: none;
+  padding: 5px;
+	width: 120px;
+  display: none;
 }
 
 .deck .card {
-  width: 110px;
+  width: 120px;
   height: 130px;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTta5Wh7OEWQ-aaijaoyZtwlxM4begudR0Oow&s');
   background-size: cover;
@@ -181,6 +182,17 @@ body {
   .modal-img {
     padding: 5px;
 	  width: 70px;
+  }
+}
+@media screen and (max-height: 700px) {
+
+  .deck .card {
+    width: 80px;
+    height: 80px;
+  }
+  .modal-img {
+    padding: 5px;
+	  width: 80px;
   }
 }
 
