@@ -3,8 +3,8 @@
   --deck-background: #bfbfbf3b;
   --card-background: #ffd07f7d;
   --card-opened-background: #b3b3b390;
-  --card-match-background: #9bcb3c8b;
-  --card-notmatch-background: #ee0e5176;
+  --card-match-background: #aaff018b;
+  --card-notmatch-background: #ff004ca8;
   --card-background-image: url('https://github.com/FoxyStoat/memory-game/blob/master/assets/img/vault-boy.png?raw=true');
 }
 
@@ -204,6 +204,7 @@ body {
   }
   .modal-img {
     padding: 5px;
-	  width: 50px;
+    width: 62px;
+    height: 80px;
   }
 }
