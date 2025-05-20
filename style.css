@@ -1,0 +1,197 @@
+:root {
+  --background: #111620c9;
+  --deck-background: #bfbfbf3b;
+  --card-background: #ffd07f7d;
+  --card-opened-background: #b3b3b390;
+  --card-match-background: #9bcb3c8b;
+  --card-notmatch-background: #ee0e5176;
+  --card-background-image: url('https://github.com/FoxyStoat/memory-game/blob/master/assets/img/vault-boy.png?raw=true');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html{
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+ 
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #06080cf0;
+  background-size: cover;
+  background-position: 49% 49%;
+  z-index: 1;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--background);
+  overflow: hidden;
+  font-family: 'Coda', cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.container h1 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.deck {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 15px;
+  margin: 0 auto;
+  background: var(--deck-background);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(145, 145, 145, 0.672);
+}
+
+.modal-img {
+    padding: 5px;
+	width: 100px;
+    display: none;
+}
+
+.deck .card {
+  width: 110px;
+  height: 130px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTta5Wh7OEWQ-aaijaoyZtwlxM4begudR0Oow&s');
+  background-size: cover;
+  display: inline-block;
+  /* line-height: 130px; */
+  font-size: 0;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  vertical-align: top;
+  cursor: pointer;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+/*   
+  line-height: 75px; */
+}
+
+
+
+.deck .card.open {
+  transform: rotateY(20deg);
+  background: var(--card-opened-background);
+  cursor: default;
+}
+
+.deck .card.open .modal-img{
+    display: inline-block;
+}
+
+.deck .card.show {
+  font-size: 33px;
+}
+
+.deck .card.show .modal-img{
+    display: inline-block;
+}
+
+.deck .card.match {
+  transform: rotateY(0);
+  background: var(--card-match-background);
+  font-size: 33px;
+  cursor: default;
+}
+
+.deck .card.match .modal-img{
+    display: inline-block;
+}
+
+.deck .card.notmatch {
+  background: var(--card-notmatch-background);
+}
+
+
+
+#score-panel {
+  /* border: 1px solid #fff; */
+  font-size: 22px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  color: #ffffff;
+}
+
+#score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 5px;
+  color: #FFCF7F;
+}
+
+#score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+#score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+*::selection {
+  background: transparent;
+}
+
+.swal2-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 200%
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .deck .card {
+    width: 80px;
+    height: 100px;
+  }
+  .modal-img {
+    padding: 5px;
+	  width: 70px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .deck .card {
+    width: 60px;
+    height: 80px;
+  }
+  .modal-img {
+    padding: 5px;
+	  width: 50px;
+  }
+}
