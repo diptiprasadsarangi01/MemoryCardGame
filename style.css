@@ -175,9 +175,9 @@ body {
 }
 
 footer{
+   
    background-color: #06080cf0;
    color: #fff;
-   text-align: center;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -189,6 +189,7 @@ footer{
    width: 100%;
    min-height: 2vh;
    z-index: 10;
+   
 }
 
 
@@ -214,6 +215,15 @@ footer{
     padding: 5px;
 	  width: 80px;
   }
+  .container h1 {
+  font-size: 28px;
+  }
+    #score-panel{
+    font-size: 14px;
+  }
+  footer{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -230,4 +240,11 @@ footer{
   footer{
     font-size: 12px;
   }
+  .container h1 {
+  font-size: 28px;
+  }
+  #score-panel{
+    font-size: 12px;
+  }
+
 }
